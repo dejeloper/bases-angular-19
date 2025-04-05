@@ -1,0 +1,69 @@
+<div class="flex justify-between flex-col m-4">
+  <div class="px-4 sm:px-0">
+    <h3 class="text-base/7 font-semibold text-gray-900">Hero</h3>
+    <p class="mt-1 max-w-2xl text-sm/6 text-gray-500">{{ name() }}</p>
+  </div>
+  <div class="mt-6 border-t border-gray-100">
+    <dl class="divide-y divide-gray-100">
+      <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+        <dt class="text-sm/6 font-medium text-gray-900">Nombre</dt>
+        <dd
+          class="font-bold mt-1 text-sm/6 text-gray-700 sm:col-span-2 sm:mt-0"
+        >
+          {{ name() }}
+        </dd>
+      </div>
+      <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+        <dt class="text-sm/6 font-medium text-gray-900">Edad</dt>
+        <dd
+          class="font-bold mt-1 text-sm/6 text-gray-700 sm:col-span-2 sm:mt-0"
+        >
+          {{ age() }}
+        </dd>
+      </div>
+      <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+        <dt class="text-sm/6 font-medium text-gray-900">Método</dt>
+        <dd
+          class="font-bold mt-1 text-sm/6 text-gray-700 sm:col-span-2 sm:mt-0"
+        >
+          {{ heroDescription() }}
+        </dd>
+      </div>
+      <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+        <dt class="text-sm/6 font-medium text-gray-900">Capitalizado</dt>
+        <!-- <dd class="font-bold mt-1 text-sm/6 text-gray-700 sm:col-span-2 sm:mt-0">
+          {{ capitalizedName() }}
+        </dd> -->
+        <dd
+          class="font-bold mt-1 text-sm/6 text-gray-700 sm:col-span-2 sm:mt-0"
+        >
+          {{ name() | uppercase }}
+        </dd>
+      </div>
+    </dl>
+  </div>
+  <div class="flex gap-4">
+    <button
+      type="button"
+      (click)="changeHero()"
+      class="rounded-md bg-white px-2.5 py-1.5 text-sm font-semibold text-gray-900 ring-1 shadow-xs ring-gray-300 ring-inset hover:bg-gray-50"
+    >
+      Cambiar nombre
+    </button>
+    <button
+      type="button"
+      (click)="changeAge()"
+      class="rounded-md bg-white px-2.5 py-1.5 text-sm font-semibold text-gray-900 ring-1 shadow-xs ring-gray-300 ring-inset hover:bg-gray-50"
+    >
+      Cambiar edad
+    </button>
+
+    <button
+      type="button"
+      (click)="resetHero()"
+      class="rounded-md bg-white px-2.5 py-1.5 text-sm font-semibold text-gray-900 ring-1 shadow-xs ring-gray-300 ring-inset hover:bg-gray-50"
+    >
+      Reset
+    </button>
+  </div>
+</div>
