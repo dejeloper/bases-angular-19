@@ -1,0 +1,51 @@
+<nav class="bg-[#3b4147] text-white">
+  <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+    <div class="relative flex h-16 items-center justify-between">
+      <div
+        class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start"
+      >
+        <div class="flex space-x-4">
+          <a
+            routerLink="/"
+            routerLinkActive="bg-gray-800 text-white"
+            [routerLinkActiveOptions]="{ exact: true }"
+            class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-500 hover:text-white"
+            >Inicio</a
+          >
+          <a
+            routerLink="/counter"
+            routerLinkActive="bg-gray-800 text-white"
+            class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-500 hover:text-white"
+            >Counter</a
+          >
+          <a
+            routerLink="/hero"
+            routerLinkActive="bg-gray-800 text-white"
+            class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-500 hover:text-white"
+            >Hero</a
+          >
+        </div>
+      </div>
+      <div
+        class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0"
+      >
+        <div class="relative ml-3">
+          <div
+            class="relative flex rounded-full bg-gray-800 text-sm focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800 focus:outline-hidden"
+            id="user-menu-button"
+            aria-expanded="false"
+            aria-haspopup="true"
+          >
+            <span class="absolute -inset-1.5"></span>
+            <span class="sr-only">Open user menu</span>
+            <img
+              class="size-8 rounded-full"
+              src="https://dejeloper.com/images/me_02.webp"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
