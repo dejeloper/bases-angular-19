@@ -1,0 +1,26 @@
+<h3 class="text-lg font-medium leading-6 text-gray-900 mb-4">
+  {{ listName() }}
+</h3>
+<ul class="w-full border rounded-lg divide-y divide-gray-200">
+  @for (character of characters(); track character.id; let even = $even; ) { @if
+  (character.power >500){
+  <li
+    class="flex justify-between items-center px-4 py-2 text-sm first:rounded-t-lg last:rounded-b-lg"
+    [class.bg-gray-100]="!even"
+  >
+    <span class="text-gray-800">{{ character.name }}</span>
+    <strong class="font-semibold" [class.text-red-800]="character.power > 8000">
+      ({{ character.power }})
+    </strong>
+  </li>
+  } @else {
+  <li
+    class="flex justify-between items-center px-4 py-2 text-sm first:rounded-t-lg last:rounded-b-lg"
+    [class.bg-gray-100]="!even"
+  >
+    <span class="text-gray-800">
+      {{ character.name }} - Este personaje no tiene poder suficiente
+    </span>
+  </li>
+  } }
+</ul>
