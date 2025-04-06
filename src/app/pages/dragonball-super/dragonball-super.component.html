@@ -7,12 +7,14 @@
 
   <section>
     <div class="max-w-sm mx-auto">
-      <dragonball-character-add (newCharacter)="addCharacter($event)" />
+      <dragonball-character-add
+        (newCharacter)="dragonballService.addCharacter($event)"
+      />
     </div>
     <div class="max-w-sm mx-auto mt-6">
       <dragonball-character-list
         listName="Listado de Personajes Super"
-        [characters]="characters()"
+        [characters]="dragonballService.characters()"
       />
     </div>
   </section>
