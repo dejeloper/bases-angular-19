@@ -3,6 +3,7 @@ import {CounterComponent} from './pages/counter/counter.component';
 import {NameComponent} from './pages/base/name.component';
 import {HeroComponent} from './pages/hero/hero.component';
 import {DragonBallComponent} from './pages/dragonball/dragonball.component';
+import {DragonBallSuperComponent} from './pages/dragonball-super/dragonball-super.component';
 
 export const routes: Routes = [
 
@@ -22,6 +23,10 @@ export const routes: Routes = [
   {
     path: 'dragonball',
     component: DragonBallComponent
+  },
+  {
+    path: 'dragonball-super',
+    component: DragonBallSuperComponent
   },
   {
     path: '**',
